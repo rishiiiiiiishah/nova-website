@@ -1,0 +1,647 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: white;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    height: 160x;
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    padding: 50px 350px;
+    /* padding: 20px 5% */
+    gap: 100px;
+    position: fixed;
+    justify-content: flex-start;
+   z-index: 10;
+   /* margin-left: 20%; */
+
+}
+
+#cursor {
+    height:20px;
+    width: 20px;
+    background-color: rgba(47, 255, 47, 0.889);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+
+#cursor-blur {
+    height:400px;
+    width: 400px;
+    background-color: rgba(172, 255, 47, 0.264);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+}
+
+
+#nav img {
+    height: 70px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+video {
+    
+ width: 100%;
+ max-width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+
+#main
+{
+    position: relative;      /*will leave position with its normal position*/
+
+    background-color: rgba(0, 0, 0, 0.442);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+
+ 
+#page1 h1 {
+    font-size: 70px;
+    font-weight:900;
+    position: relative;
+}
+
+#page1 h1::before {
+    content: "DISCOVER. DEEP. SPACE.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 1px greenyellow;
+    z-index: -1;
+    
+}
+
+#page1 h2 {
+font-size: 30px; 
+font-weight: 100;
+margin-top: 10px;
+margin-bottom: 20px;
+}
+#page1 p{
+font-size: 25px;
+font-weight: 500;
+width: 40%;
+}
+
+#page2 {
+   min-height: 100vh; 
+    width: 100%;
+    z-index: 10;
+
+}
+
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+
+}
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+ #scroller h4 {
+    display: inline-block;
+    font-size: 70px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 10px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 1px greenyellow;
+} 
+
+#scroller h4:hover {
+    color: green;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#aboutus {
+    height: 40vh;
+    width: 100%;
+    
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#aboutus img {
+height: 200px;
+width: 200px;
+border-radius: 50px;
+object-fit: cover;
+}
+
+#about-us {
+    width: 40%;
+    text-align: center;
+}
+#about-us  h3 {
+font-size: 30px;
+font-weight: 800;
+margin-bottom: 30px;
+}
+#about-us p {
+    font-size: 20px;
+    line-height: 26px;
+
+}
+
+
+
+#cardscontainer {
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 22%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+#card1 {
+    background-image: url(helo.jpg);
+}
+
+#card2 {
+    background-image: url(planets.jpg);
+}
+
+#card3 {
+    background-image: url(bye.jpg);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: greenyellow;
+    padding-top: 100px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overlay h4 {
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+color: black;
+font-size: 18px;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(-1,1,0,20deg);
+}
+
+#greendiv {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: greenyellow; */
+    background: linear-gradient(green,rgb(0, 107, 128));
+
+
+}
+
+#green-div h4 {
+    width: 45%;
+    line-height: 33px;
+    text-align: center;
+    color: black;
+    font-size: 33px;
+text-transform: uppercase;
+
+}
+
+#green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 20%;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+#page3>p {
+    font-size: 30px;
+    font-weight: 700;
+    width: 45%;
+ text-align: center;
+ line-height: 45px;
+
+}
+
+
+#page3 img {
+    position: absolute;
+    height: 60px;
+
+
+}
+
+#page3 #colonn1 {
+left: 20%;
+top: 20%;
+height: 70px;
+transform: rotate(180deg);
+}
+
+#page3 #colon2 {
+ height: 70px;
+bottom: 20%;
+right: 20%;
+transform: rotate(360deg);
+
+}
+
+#page4 {
+    /* background-color: red; */
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+}
+
+.elem {
+    height: 70%;
+    width: 20%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.elem h2 {
+    height: 100%;
+    background-color: green;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    color: black;
+    font-weight: 800;
+    font-size: 40px;
+    position: absolute;
+    z-index: 10;
+
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: all ease 0.5s;
+
+
+}
+.elem:hover h2 {
+background-color: transparent;
+color: white;
+}
+#page4 h1 {
+    font-size: 80px;
+    position: absolute;
+    top: 0; /* Adjust the top value to position the h1 element as needed */
+    font-weight: 900;
+    font-family: gilroy;
+    color: aliceblue;
+    -webkit-text-stroke: 2px white;
+}
+
+
+
+#dotted-image-container {
+    width: 100px; /* Adjust the width as needed */
+    height: 100%; /* Match the height of the footer */
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+#dotted-image-container img {
+    height: 100%;
+    width: 100%;
+}
+
+#footer {
+    background: linear-gradient(to left bottom, green, greenyellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    height: 40vh;
+    position: relative; /* Add this for positioning context */
+}
+#footer img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+
+#footer-content {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    z-index: 2;
+}
+
+.footer-section {
+    width: fit-content;
+}
+
+#f2 h3, #f3 h3 {
+    font-size: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-bottom: 8px;
+}
+#f4 p {
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    margin-left: 100px; /* Adjust the value as needed to shift the text to the right */
+}
+
+#page1 #arrow {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    border: 2px solid #95c119;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: -2%;
+    bottom: -2%;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+
+
+}
+
+#page1 #arrow i{
+    font-size: 50px;
+    font-weight: 100;
+}
+
+#page1 #arrow:hover {
+    scale: 0.4;
+    background-color: greenyellow;
+}
+
+@media only screen and (max-width: 800px) {
+    #nav {
+        padding: 20px; /* Adjust padding for smaller screens */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #nav h4 {
+        margin: 8px 0;
+    }
+
+    #cursor,
+    #cursor-blur {
+        display: none;
+    }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        position: fixed;
+        z-index: -1;
+    }
+
+    #main {
+        background-color: rgba(0, 0, 0, 0.442);
+    }
+
+    #page1 h1 {
+        font-size: 8vw;
+    }
+
+    #page1 h2 {
+        font-size: 3vw;
+    }
+
+    #page1 p {
+        font-size: 2vw;
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    #scroller h4 {
+        font-size: 5vw;
+    }
+
+    #aboutus {
+        padding: 0 10px;
+    }
+
+    #aboutus img {
+        height: 100px; /* Adjust height for smaller screens */
+        width: 100px; /* Adjust width for smaller screens */
+    }
+
+    #about-us h3 {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    #about-us p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        line-height: 1.3;
+    }
+
+    #cardscontainer {
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    #green-div {
+        flex-direction: column;
+    }
+
+    #green-div h4 {
+        width: 80%;
+        font-size: 14px; /* Adjust font size for smaller screens */
+        line-height: 20px;
+    }
+
+    #green-div img {
+        height: 50px; /* Adjust height for smaller screens */
+        width: 50px; /* Adjust width for smaller screens */
+    }
+
+    #page3>p {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    #page3 img {
+        height: 30px; /* Adjust height for smaller screens */
+    }
+
+    #page3 #colonn1,
+    #page3 #colon2 {
+        height: 40px; /* Adjust height for smaller screens */
+    }
+
+    #page4 h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .elem h2 {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    #footer {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    #footer img {
+        display: none;
+    }
+
+    #dotted-image-container {
+        width: 50px; /* Adjust width for smaller screens */
+        height: auto;
+    }
+
+    #footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-section {
+        width: 80%;
+    }
+
+    #f2 h3,
+    #f3 h3 {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin-left: 20px; /* Adjust margin for smaller screens */
+        margin-bottom: 8px;
+    }
+
+    #f4 p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        line-height: 1.5;
+        margin-left: 20px; /* Adjust margin for smaller screens */
+    }
+}
