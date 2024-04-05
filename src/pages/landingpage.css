@@ -1,0 +1,6 @@
+.bg 
+{background-image: url('../images/beautiful-constellations-with-blue-sky.jpg');
+  background-size:cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,168 @@
+/* /* #root{
+  width: 100%;
+  
+} */
+
+.hash{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -28vh;
+    left: 50vb;
+  }
+  
+
+  /* @media (min-width:768px)
+{ */
+  .navbar{
+    width: 5%;
+    box-shadow: inset 7px 0 25px rgb(0, 195, 255);
+    /* width: 250px; */
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+    align-items:center ;
+    padding-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.516);
+    backdrop-filter: blur(0.5px);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    transition: 0.5s ease;
+    color:white;    
+    z-index: 10;
+  }
+/* } */
+  
+  
+  .navbar:hover{
+    box-shadow: inset 15px 0 30px rgb(0, 195, 255);
+    width: 250px;
+    
+    /* padding-left:20px; */
+  } 
+  
+  .navbar:hover ul li p{
+    display:inline;
+  }
+  
+  
+  ul{
+    margin-top: 40px;
+  }
+
+ 
+  
+  ul li:hover p{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: ease-in 0.3s;
+    text-shadow: 4px 4px 15px rgb(0, 195, 255);
+  }
+  
+  .pic{
+    width: 40px;
+    height: 40px;
+  }
+   
+
+  ul li p{
+    font-size: 20px;
+    list-style-type:none;
+    padding-top: 0;
+    display: none;
+    white-space: nowrap;
+    font-weight: 400;
+    padding-left: 20px; 
+  }
+  
+  .main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* .container{
+    margin-bottom: 10vh;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    width: 100%;
+    margin-top: 0;
+    
+  } */
+  
+  /* .container h1{
+    padding-top: 30px;
+    text-shadow: 4px 4px 15px #ffffff;
+    font-size: 35px;
+  
+  } */
+  
+  
+  .content{
+    font-size: 45px;
+    margin: 0;
+  }
+  
+  /* .subtitle{
+  font-size: 29px;
+  
+  } */
+  
+  /* .hash h3{
+    font-size: 30px;
+    position: fixed;
+    text-shadow: 4px 4px 15px #ffffff;
+    margin-top: 20px;
+  } */
+  
+  ul li{
+    display: flex;
+    padding-top: 20px;
+    /* display: inline; */
+  
+  } 
+
+/* @media (max-width:786px)
+{
+  .navbar
+  {
+    display:hidden;
+  }
+} */
+.navbar li {
+  /* Your existing styles */
+  position: relative; /* Add position relative to create a positioning context */
+}
+
+.dropdown-content {
+  /* Your existing styles */
+  position: absolute;
+  top: 100%; /* Position the dropdown content below the parent li */
+  left: 0; /* Align the dropdown content with the left edge of the parent li */
+ /* Initially hide the dropdown content */
+  background-color: #130d0d;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+ display: none;/* Arrange items vertically within the flex container */
+}
+.dropdown-content p {
+  /* Your existing styles */
+  padding: 12px 16px; /* Add padding for better readability */
+  text-decoration: none;
+ 
+  
+}
+
+.navbar li:hover .dropdown-content {
+   /* Show the dropdown content when hovering over the parent li */
+  flex-direction: column;
+  display: flex;
+}
+
